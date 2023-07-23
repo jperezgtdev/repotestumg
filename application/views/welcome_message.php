@@ -80,6 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h2>Ejemplo de vista modificada en CI</h2>
+	<h4>Agregue codigo para el ejemplo.</h4>
 </div>
 
 </body>
