@@ -27,6 +27,12 @@ class Index extends CI_Controller
 	public function client(){
 		$nombre		= $this->input->post('nombre');  
 		$password 	= $this->input->post('password');
-		echo $nombre."  ".$password;
+		$decod = base64_decode($password);
+		echo "Variable codificada ".$password;
+		echo "Variable decodificada ".$decod;
+		$resultados = $this->Model_usuarios->login($nombre, sha1($decod));
+		echo "<pre>";
+			print_r($resultados);
+		echo "</pre>";
 	}
 }
